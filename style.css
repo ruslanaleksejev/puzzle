@@ -1,0 +1,47 @@
+/* Главные изменения для стабильности */
+.assembly-area {
+    flex: 2; /* Даем больше места полю */
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.puzzle-grid {
+    display: grid;
+    width: 450px; /* Фиксированный размер поля */
+    height: 450px;
+    background: #222;
+    border: 2px solid #646cff;
+    position: relative;
+}
+
+.grid-square {
+    border: 1px solid #333;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.grid-square img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none; /* Чтобы картинка не мешала дропу */
+}
+
+.storage-area {
+    height: 150px;
+    overflow-x: auto;
+    background: #111;
+    padding: 10px;
+}
+
+.puzzle-piece {
+    width: 80px; /* Размер кусочков в хранилище одинаковый для всех уровней */
+    height: 80px;
+    cursor: grab;
+    border: 1px solid #646cff;
+    flex-shrink: 0;
+}
